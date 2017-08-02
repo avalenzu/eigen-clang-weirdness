@@ -5,8 +5,10 @@ This is a reproduction repo for odd behavior I've encountered in working with Ei
 It appears that when compiling with `clang-3.9` at `-O2` or above, passing a `Matrix3d` to a function 
 as a const reference, copying it and returning an element of the copy can lead to garbage being returned 
 if certain other operations are performed inside the function.
-
+ 
 ## Reproduction instructions
+- Make sure `clang-3.9` is installed.
+- Execute the following commands in a terminal:
 ```sh
 git clone https://github.com/avalenzu/eigen-clang-weirdness.git
 cd eigen-clang-weirdness

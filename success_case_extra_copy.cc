@@ -29,6 +29,8 @@ int main() {
   R(1, 2) = 0.7;
   double R12 = reproFunction(R);
   bool are_they_equal = (R12 == R(1,2));
-  std::cout << "R12 == R(1,2):" << are_they_equal << std::endl;
+  std::cout << "R12 == R(1,2): " << are_they_equal << std::endl;
+  std::cout << "R12: " << R12 << std::endl;
+  std::cout << "R(1, 2): " << R(1, 2) << std::endl;
 }
 

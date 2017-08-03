@@ -1,5 +1,6 @@
-#include <iostream>
 #include <Eigen/Dense>
+#include <boost/math/special_functions/next.hpp>
+#include <iostream>
 
 /**
  * This is a highly distilled version of fcl::detail::boxBox2 from 
@@ -32,5 +33,7 @@ int main() {
   std::cout << "R12 == R(1,2): " << are_they_equal << std::endl;
   std::cout << "R12: " << R12 << std::endl;
   std::cout << "R(1, 2): " << R(1, 2) << std::endl;
+  std::cout << "float_distance(R12, R(1,2)): "
+            << boost::math::float_distance(R12, R(1, 2)) << std::endl;
 }
 

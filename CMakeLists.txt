@@ -7,6 +7,9 @@ set (CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install"
 set(CMAKE_CXX_COMPILER clang-3.9)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y -lstdc++ -lm -O2")
 
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 ExternalProject_Add(
 	eigen
 	URL http://bitbucket.org/eigen/eigen/get/3.3.3.tar.gz
